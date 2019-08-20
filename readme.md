@@ -11,4 +11,6 @@
 
 ### 4. php artisan serve y va a correr en el puerto 8000
 
+#### Para el ejercicio solo se consideraron 3 marcas de carros. Un carro solamente pertenece a un dueño y un dueño solamente tiene un auto.
+
  
