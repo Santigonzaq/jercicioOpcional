@@ -34,7 +34,7 @@ class generalController extends Controller
     public function registrar(){
 
         $datos=request()->validate(["marca"=>"exists:marcas,id","placa"=>"required",
-            "name"=>"required","cedula"=>"required"],["marca.unique"=>"La marca no existe en el sistema"]);
+            "name"=>"required","cedula"=>"required"],["marca.exists"=>"La marca no existe en el sistema"]);
         $newVehiculo=Vehiculo::create(["placa"=>$datos["placa"],"marca_id"=>$datos["marca"]]);
         //dd($newVehiculo);
         if($newVehiculo->wasRecentlyCreated){
